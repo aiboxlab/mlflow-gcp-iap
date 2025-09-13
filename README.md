@@ -22,9 +22,13 @@ uv pip install mlflow-gcp-iap
 pip install mlflow-gcp-iap
 ```
 
-Once the library is installed, you must configure the library by running `mlflow-gcp-iap setup`. The CLI will ask for the required configuration. It is essential that the [GCP Application Default Credentials](https://cloud.google.com/docs/authentication/provide-credentials-adc) is configured locally, and that the user and service account have sufficient permissions. For the user, permissions related to Service Account Impersonation and token creation are required. For the service account, only the permission to access the IAP-protected MlFlow tracking server is mandatory.
+Once the library is installed, you must configure it by running `mlflow-gcp-iap setup`. The CLI will ask for the required configuration. 
 
-To check whether the configuration works correctly, run `mlflow-gcp-iap test`. This command runs the script [`src/mlflow_gcp_iap/test.py`](./src/mlflow_gcp_iap/test.py), which creates a run on the MlFlow server. The library provides a simple context manager that automatically refresh tokens and update the MlFlow environment variables. The intended usage is as follows:
+It is essential that the [GCP Application Default Credentials](https://cloud.google.com/docs/authentication/provide-credentials-adc) is configured locally, and that the user and service account have sufficient permissions. For the user, permissions related to Service Account Impersonation and token creation are required. For the service account, only the permission to access the IAP-protected MlFlow tracking server is mandatory.
+
+To check whether the configuration works correctly, run `mlflow-gcp-iap test`. This command runs the script [`src/mlflow_gcp_iap/test.py`](./src/mlflow_gcp_iap/test.py), which creates a run on the MlFlow server. 
+
+The library provides a simple context manager that automatically refresh tokens and update the MlFlow environment variables. The intended usage is as follows:
 
 ```python
 import mlflow
