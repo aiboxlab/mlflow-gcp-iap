@@ -12,14 +12,13 @@ readme = "README.md"
 classifiers = ["Programming Language :: Python :: 3.10", "Programming Language :: Python :: 3.11", "Programming Language :: Python :: 3.12", "Programming Language :: Python :: 3.13", "Development Status :: 3 - Alpha"]
 requires-python = ">=3.10"
 dependencies = [
-    "google-auth>=2.40.3",
-    "platformdirs>=4.4.0",
-    "pydantic[email]>=2.11.9",
-    "pydantic-settings>=2.10.1",
+    "google-auth>=2.38.0",
+    "platformdirs>=4.0.0",
+    "pydantic-settings>=2.0.0",
     "requests>=2.32.5",
     "typer>=0.17.4",
     "uv>=0.8.15",
-    "mlflow>=3.3.2",
+    "mlflow>=2.0.0",
 ]
 
 [project.urls]
